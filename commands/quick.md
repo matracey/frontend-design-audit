@@ -1,5 +1,5 @@
 ---
-name: frontend-design-audit:quick
+name: frontend-design-audit.quick
 description: Auto-evaluate and fix usability issues without discussion. Evaluates the UI, then immediately implements fixes for all severity 3-4 issues and practical severity 2 fixes.
 ---
 

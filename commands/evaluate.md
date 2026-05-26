@@ -1,5 +1,5 @@
 ---
-name: frontend-design-audit:evaluate
+name: frontend-design-audit.evaluate
 description: Run a usability audit on front-end code and produce a structured report. No implementation — just the analysis.
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: frontend-design-audit:improve
+name: frontend-design-audit.improve
 description: Implement usability improvements based on a previous audit. Discusses each change with the user before implementing.
 ---
 
