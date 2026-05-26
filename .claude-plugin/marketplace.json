@@ -8,7 +8,7 @@
     {
       "name": "frontend-design-audit",
       "source": "./",
-      "description": "Audit and improve front-end usability using 15 established design principles. Acts as a Senior UX designer/engineer reviewing your interface end-to-end.",
+      "description": "Audit and improve front-end usability using 15 established design principles. Acts as a Senior UX designer/engineer reviewing your interface end-to-end. Compatible with Claude Code and GitHub Copilot CLI.",
       "version": "1.0.0",
       "author": {
         "name": "mistyhx"

@@ -1,6 +1,6 @@
 # Frontend Design Audit
 
-A Claude Code skill that audits and improves the usability of existing front-end interfaces. It evaluates your UI code against 15 established design principles, identifies problems, rates severity, and helps fix what it finds.
+A Claude Code and GitHub Copilot CLI plugin that audits and improves the usability of existing front-end interfaces. It evaluates your UI code against 15 established design principles, identifies problems, rates severity, and helps fix what it finds.
 
 ## What It Does
 
@@ -76,6 +76,37 @@ Or use an absolute path:
 claude --plugin-dir ~/plugins/frontend-design-audit
 ```
 
+### GitHub Copilot CLI
+
+#### Recommended: Marketplace install
+
+Register this repository as a marketplace, then install the plugin. The marketplace is registered under the repository's basename (`frontend-design-audit`), so the install reference uses `<plugin>@<marketplace>` with both names equal:
+
+```bash
+copilot plugin marketplace add mistyhx/frontend-design-audit
+copilot plugin install frontend-design-audit@frontend-design-audit
+```
+
+The plugin then appears under `copilot plugin list` and inside the running CLI under `/plugin` and `/skills`.
+
+#### Local development install
+
+To try a working copy without going through a marketplace, point Copilot at the directory directly:
+
+```bash
+copilot --plugin-dir ./path/to/frontend-design-audit
+```
+
+#### Using the plugin
+
+Invoke the skill via natural language, e.g. `Run the frontend design audit on examples/coffee-shop.html`, or via one of the slash commands:
+
+```
+/frontend-design-audit.evaluate
+/frontend-design-audit.improve
+/frontend-design-audit.quick
+```
+
 ## Usage
 
 ### Full Audit (default)
@@ -91,9 +122,9 @@ Evaluates your UI, presents a report, discusses findings with you, then implemen
 Produces the audit report without implementing changes:
 
 ```
-/frontend-design-audit:evaluate
-/frontend-design-audit:evaluate src/pages/
-/frontend-design-audit:evaluate App.tsx
+/frontend-design-audit.evaluate
+/frontend-design-audit.evaluate src/pages/
+/frontend-design-audit.evaluate App.tsx
 ```
 
 ### Improve
@@ -101,7 +132,7 @@ Produces the audit report without implementing changes:
 Implements fixes from a previous evaluation, discussing each change:
 
 ```
-/frontend-design-audit:improve
+/frontend-design-audit.improve
 ```
 
 ### Quick Mode
@@ -109,8 +140,8 @@ Implements fixes from a previous evaluation, discussing each change:
 Auto-evaluates and fixes without discussion — good for rapid iteration:
 
 ```
-/frontend-design-audit:quick
-/frontend-design-audit:quick src/components/Dashboard.tsx
+/frontend-design-audit.quick
+/frontend-design-audit.quick src/components/Dashboard.tsx
 ```
 
 ### Live Website Audit
